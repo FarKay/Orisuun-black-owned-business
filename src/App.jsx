@@ -2,10 +2,16 @@
 import { useState } from "react";
 
 function App() {
-  const [activeButton, setActiveButton] = useState(null);
+  const [activeButton, setActiveButton] = useState(1);
+
+  const [activeBtn, setActiveBtn] = useState(1);
 
   function handleClick(id) {
     setActiveButton(id);
+  }
+
+  function onClick(id) {
+    setActiveBtn(id);
   }
 
   return (
@@ -135,16 +141,16 @@ function App() {
           <div className="mb-5 flex cursor-pointer flex-row items-center justify-center gap-[8px] rounded-[66px] bg-[#F8F8F8] p-1">
             <button
               id={1}
-              onClick={() => handleClick(1)}
-              className={`${activeButton === 1 ? "shadow-3xl rounded-[59px] bg-[#FFFFFF] font-semibold text-[#001E5F]" : "bg-[#F8F8F8] font-medium text-[#808181]"} flex items-center justify-center px-20 py-4 text-[18px] leading-[24px]`}
+              onClick={() => onClick(1)}
+              className={`${activeBtn === 1 ? "shadow-3xl rounded-[59px] bg-[#FFFFFF] font-semibold text-[#001E5F]" : "bg-[#F8F8F8] font-medium text-[#808181]"} flex items-center justify-center rounded-[59px] px-20 py-4 text-[18px] leading-[24px]`}
             >
               Growth
             </button>
 
             <button
-              id={5}
-              onClick={() => handleClick(5)}
-              className={`${activeButton === 5 ? "shadow-3xl rounded-[59px] bg-[#FFFFFF] font-semibold text-[#001E5F]" : "font-medium text-[#808181]"} flex items-center justify-center px-10 py-4 text-[18px] leading-[24px]`}
+              id={2}
+              onClick={() => onClick(2)}
+              className={`${activeBtn === 2 ? "shadow-3xl rounded-[59px] bg-[#FFFFFF] font-semibold text-[#001E5F]" : "font-medium text-[#808181]"} flex items-center justify-center px-10 py-4 text-[18px] leading-[24px]`}
             >
               Visibility and collaboration
             </button>
@@ -244,19 +250,19 @@ function App() {
             <button
               id={1}
               onClick={() => handleClick(1)}
-              className={` ${activeButton === 1 ? "shadow-3xl rounded-[59px] bg-[#FFFFFF] font-semibold text-[#1B3C7B]" : "inline-block font-medium"} px-16 py-5 text-[20px] leading-[24px]`}
+              className={` ${activeButton === 1 ? "shadow-3xl rounded-[59px] bg-[#FFFFFF] font-semibold text-[#1B3C7B]" : "text-[#808181]"} px-16 py-5 text-[20px] font-medium leading-[24px]`}
             >
               Monthly
             </button>
 
             <div className="flex flex-col items-center justify-center">
               <button
-                id={2}
-                onClick={() => handleClick(2)}
-                className={`${activeButton === 2 ? "shadow-3xl rounded-[59px] bg-[#FFFFFF] font-semibold" : "font-medium"} flex flex-col items-center justify-center gap-[8px] px-12 py-2`}
+                id={4}
+                onClick={() => handleClick(4)}
+                className={`${activeButton === 4 ? "shadow-3xl rounded-[59px] bg-[#FFFFFF]" : ""} flex flex-col items-center justify-center gap-[8px] px-12 py-2`}
               >
                 <span
-                  className={`${activeButton === 2 ? "font-semibold text-[#1B3C7B]" : "font-medium text-[#808181]"} text-[20px] leading-[24px]`}
+                  className={`${activeButton === 4 ? "font-semibold text-[#1B3C7B]" : "font-medium text-[#808181]"} text-[20px] leading-[24px]`}
                 >
                   Quarterly
                 </span>
@@ -268,12 +274,12 @@ function App() {
 
             <div className="flex flex-col items-center justify-center">
               <button
-                id={3}
-                onClick={() => handleClick(3)}
-                className={`${activeButton === 3 ? "shadow-3xl rounded-[59px] bg-[#FFFFFF] font-semibold" : "font-medium"} flex flex-col items-center justify-center gap-[8px] px-12 py-2`}
+                id={5}
+                onClick={() => handleClick(5)}
+                className={`${activeButton === 5 ? "shadow-3xl rounded-[59px] bg-[#FFFFFF]" : ""} flex flex-col items-center justify-center gap-[8px] px-12 py-2`}
               >
                 <span
-                  className={`${activeButton === 3 ? "font-semibold text-[#1B3C7B]" : "font-medium text-[#808181]"} text-[20px] leading-[24px]`}
+                  className={`${activeButton === 5 ? "font-semibold text-[#1B3C7B]" : "font-medium text-[#808181]"} text-[20px] leading-[24px]`}
                 >
                   Annually
                 </span>
