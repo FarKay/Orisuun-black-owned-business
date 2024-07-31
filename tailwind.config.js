@@ -11,7 +11,7 @@ export default {
           "radial-gradient( rgba(52, 100, 158, 0.8) 0%, rgba(52, 100, 158, 0.34288) 49.19%, rgba(52, 100, 158, 0) 100%)",
       },
       boxShadow: {
-        "3xl": "0px 2px 4px -2px rgba(16, 24, 40, 0.06)",
+        "3xl": " 0px 4px 8px -2px #1018281a",
       },
     },
   },
